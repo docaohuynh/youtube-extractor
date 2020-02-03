@@ -20,7 +20,7 @@ class PlayerSourceParser {
     var entryPoint = RegExp(
             r"\b[a-z]+\s*&&\s*[a-z]+\.set\([^,]+\s*,\s*(?:encodeURIComponent\s*\()?\s*([a-zA-Z0-9$]+)\(")
         .firstMatch(_raw)
-        .group(1);
+        ?.group(1);
     if (entryPoint == null) {
       throw ParseException(
           'Could not find the entry function for signature deciphering.');
