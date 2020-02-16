@@ -101,7 +101,7 @@ class YouTubeExtractor {
       var contentLength = adaptiveStreamInfo[i].parseContentLength();
 
       // If content length is 0, it means that the stream is gone or faulty
-      if (contentLength > 0) {
+      if (contentLength != null && contentLength > 0) {
         // Extract cipher if needed
         var cipher = adaptiveStreamInfo[i].parseCipher();
 

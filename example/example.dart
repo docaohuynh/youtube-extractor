@@ -5,6 +5,6 @@ var extractor = YouTubeExtractor();
 
 main() async {
   // Get and print the audio info for the passed video (podcast)
-  var audioInfo = await extractor.getMediaStreamsAsync('omUSZW4yF4Y');
+  var audioInfo = await extractor.getMediaStreamsAsync('1jY7CJsw6ic');
   print('Audio URL: ${audioInfo.audio.first.url}');
 }
